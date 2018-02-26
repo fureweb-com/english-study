@@ -1,0 +1,34 @@
+<div>
+  <h1>단어장 테스트</h1>
+  <label>
+    <input type="radio" name="language" id="r1" :value="'eng'" v-model="language">영어 -> 한글</label>
+  <label>
+    <input type="radio" name="language" id="r2" :value="'kor'" v-model="language">한글 -> 영어</label>
+  <br>
+  <input type="text" v-model="phrase" placeholder="단어입력" @keyup.enter="translate">
+  <button @click="translate">번역</button>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th colspan="2">단어</th>
+      </tr>
+    </thead>
+    <tbody v-if="result.length > 0">
+      <tr v-for="word in result">
+        <template v-if="word.language === 'en'">
+          <td>{{word.text}}</td>
+          <td><button>답답노트에 추가</button></td>
+        </template>
+        <template v-if="word.language !== 'en'">
+          <td colspan="2">{{word.text}}</td>
+        </template>
+      </tr>
+    </tbody>
+    <tbody v-if="!result.length">
+      <tr>
+        <td>검색 결과가 없습니다.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

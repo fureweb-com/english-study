@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>영어 스터디</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <base href="/">
+
+  <!--STYLES-->
+  <!--STYLES END-->
+  <%- style %>
+</head>
+<body>
+<%- (ssr ? ssr : '<div id="app">Loading...</div>') %>
+
+<!--SCRIPTS-->
+<!--SCRIPTS END-->
+<%- initialState %>
+<div id="popup_anchor"></div>
+<script src="/bundle.js"></script>
+</body>
+</html>

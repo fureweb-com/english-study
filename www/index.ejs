@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <base href="/">
+
+  <!--STYLES-->
+  
+  <!--STYLES END-->
+  <%- style %>
+</head>
+<body>
+<%- (ssr ? ssr : '<div id="app">Loading...</div>') %>
+
+<!--SCRIPTS-->
+
+<!--SCRIPTS END-->
+<%- initialState %>
+<div id="popup_anchor"></div>
+<script src="/bundle.js"></script>
+</body>
+</html>
