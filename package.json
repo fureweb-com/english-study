@@ -7,7 +7,7 @@
   "dependencies": {
     "axios": "^0.16.1",
     "babel-polyfill": "^6.23.0",
-    "ejs": "2.3.4",
+    "ejs": "2.5.7",
     "flatpickr": "^4.1.4",
     "fs-extra": "^4.0.1",
     "jquery": "^3.2.1",
