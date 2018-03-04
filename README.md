@@ -15,7 +15,9 @@
 
 '번역' 이라는 한글을 영어 단어로 요청하는 경우, curl에서 다음과 같이 사용.
 (request header가 단순 curl agent인 경우 웹페이지를 응답하고있음. 가짜 헤더라도 작성해 줘야함.)
+```bash
 curl 'https://glosbe.com/gapi/translate?from=kor&dest=eng&format=json&pretty=false&phrase=%EB%B2%88%EC%97%AD' -H 'accept-encoding: gzip, deflate, br' -H 'accept-language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7' -H 'upgrade-insecure-requests: 1' -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36' -H 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8' -H 'authority: glosbe.com' -H 'cookie: __utmc=200117880; __utmz=200117880.1514868222.1.1.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=(not%20provided); __utmt=1; __utma=200117880.1029487767.1514868222.1514868222.1514868222.1; locale=ko; ld=%7B%22d%22%3A%5B%22en%3Ako%22%2C%22ko%3Aen%22%5D%7D; glosbeScreen=1583x929; __utmb=200117880.14.10.1514868222' --compressed
+```
 
 핵심은 위 curl 뒤 URL에 들어갈 queryString에 대한 부분
 - from : 시작언어
